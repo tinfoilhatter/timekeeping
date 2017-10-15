@@ -1,0 +1,3 @@
+#!/usr/bin/perl
+
+printf("%.6f Ms EA\n", time / 1000000);
