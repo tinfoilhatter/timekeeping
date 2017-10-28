@@ -1,0 +1,85 @@
+#!/usr/bin/perl
+#
+# Calculate local time in fictitious Greek clock
+# http://blog.plover.com/calendar/Greek-clock.html
+# Author: Mark Jason Dominus (mjd@plover.com)
+# This program is in the public domain.
+#
+
+my $PI = atan2(0, -1);
+
+use Getopt::Std;
+my %opt;
+getopts('l:s:', \%opt) or usage();
+my $A; 
+if ($opt{l} =~ /\d/) {
+  $A = 360 * 60 * (1-cos(radians($opt{l})));
+} elsif ($opt{s} =~ /:/) {
+  my ($hr, $mn) = split /:/, $opt{s};
+  $A = (($hr - 18) * 60 + $mn) * 60;
+} else {
+  usage();
+}
+
+my $time = time;
+my $days_since_equinox = ($time - 1047950185)/86400;
+my $days_per_year = 365.2422;
+
+my $sunrise_adj = $A * sin($days_since_equinox / $days_per_year 
+                                   * 2 * $PI );
+
+my $length_of_daytime   = 12 * 3600 + 2 * $sunrise_adj;
+my $length_of_nighttime = 12 * 3600 - 2 * $sunrise_adj;
+
+my $time_of_sunrise =  6 * 3600 - $sunrise_adj;
+my $time_of_sunset  = 18 * 3600 + $sunrise_adj;
+
+my ($gh, $gm) = time_to_greek($time);
+my ($h, $m) = (localtime($time))[2,1];
+
+printf "Standard: %2d:%02d\n",  $h,  $m;
+printf "   Greek: %2d:%02d\n", $gh, $gm;
+
+sub time_to_greek {
+  my ($epoch_time) = shift;
+  my $time_of_day;
+  { my ($h, $m, $s, $dst) = (localtime($epoch_time))[2,1,0,8];
+    $time_of_day = ($h-$dst) * 3600 + $m * 60 + $s;
+  }
+  my ($greek, $hour, $min);
+  if ($time_of_day < $time_of_sunrise) {
+    # change early morning into night
+    $time_of_day += 24 * 3600;
+  }
+  if ($time_of_day < $time_of_sunset) {
+    # day
+    my $diff = $time_of_day - $time_of_sunrise;
+    $greek = 6 + ($diff / $length_of_daytime) * 12;
+  } else {
+    # night
+    my $diff = $time_of_day - $time_of_sunset;
+    $greek = 18 + ($diff / $length_of_nighttime) * 12;
+  }
+
+  $hour = int($greek);
+  $min = int(60 * ($greek - $hour));
+  ($hour, $min);
+}
+
+sub radians {
+  my ($deg) = @_;
+  return $deg * 2 * $PI / 360;
+}
+
+sub usage {
+  print STDERR "Usage: greektime [ -l latitude ] [ -s summer_solstice_sunset ]
+
+One of latitude or sunset time must be given.
+Latitude should be in degrees north of the equator.
+  (Negative for southern hemisphere)
+Sunset time should be given in the form '19:37' in local STANDARD time.
+  (Southern hemisphere should use the WINTER solstice.)
+";
+  exit 2;
+}
+
