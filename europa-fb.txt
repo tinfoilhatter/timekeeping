@@ -1,45 +1,111 @@
-New clock/calendar system for Europa, a moon of Jupiter. http://www.ludism.org/tinfoil/Europan_Clock_and_Calendar Comments, debugging welcome.
+New clock/calendar system for Europa, a moon of Jupiter. 
+http://www.ludism.org/tinfoil/Europan_Clock_and_Calendar Comments, 
+debugging welcome.
 
 Mark Schnitzius 
 
 I do indeed love this! But I have an issue with it.
 
-Basing the day on the orbit of Europa around Jupiter would mean that position of the sun (and hence the lit half of Jupiter) would be drifting with every three-day cycle. If it was based on the (very similar) time between peri-suns (is that even a word?), instead then people there would get the sun on one side (cycling through an analemma, I'd imagine, but at least consistently), and the lit Jupiter on the other, every three eudays. Surely this would be more useful for a Europan denizen?
+Basing the day on the orbit of Europa around Jupiter would mean that 
+position of the sun (and hence the lit half of Jupiter) would be 
+drifting with every three-day cycle. If it was based on the (very 
+similar) time between peri-suns (is that even a word?), instead then 
+people there would get the sun on one side (cycling through an 
+analemma, I'd imagine, but at least consistently), and the lit 
+Jupiter on the other, every three eudays. Surely this would be more 
+useful for a Europan denizen?
 
 Ron Hale-Evans 
 
-Hey, Mark, I really appreciate your feedback. Let me try to understand it. Are you suggesting that the euday should be 1/3 of the time between perihelions on Europa? Isn't the current euday duration already a pretty close approximation of that? (I'm using "perihelion" even though Europa orbits Jupiter and not the Sun.) Wouldn't the time of perihelion over an orbital period only drift a little, let's say not much more than sunrise and sunset times on Earth? It strikes me that if you adjusted the Europan epoch to be shortly after perihelion near the first day of the Jovian epoch, then perihelion would occur every Wednesday and Sunday indefinitely, or at least regularly.
+Hey, Mark, I really appreciate your feedback. Let me try to 
+understand it. Are you suggesting that the euday should be 1/3 of the 
+time between perihelions on Europa? Isn't the current euday duration 
+already a pretty close approximation of that? (I'm using "perihelion" 
+even though Europa orbits Jupiter and not the Sun.) Wouldn't the time 
+of perihelion over an orbital period only drift a little, let's say 
+not much more than sunrise and sunset times on Earth? It strikes me 
+that if you adjusted the Europan epoch to be shortly after perihelion 
+near the first day of the Jovian epoch, then perihelion would occur 
+every Wednesday and Sunday indefinitely, or at least regularly.
 
-If not, where am I wrong? You obviously know quite a bit about astronomy, so I'm one Big Ear. :)
+If not, where am I wrong? You obviously know quite a bit about 
+astronomy, so I'm one Big Ear. :)
 
-Btw, it's important to me that the Europan timekeeping system be simple and regular. Because of artificial lighting, astronomical events, while important, are not all-important.
+Btw, it's important to me that the Europan timekeeping system be 
+simple and regular. Because of artificial lighting, astronomical 
+events, while important, are not all-important.
 
 Mark Schnitzius 
 
-> Are you suggesting that the euday should be 1/3 of the time between perihelions on Europa?
+> Are you suggesting that the euday should be 1/3 of the time between 
+perihelions on Europa?
 
-Yes, that was my suggestion. The time between perihelions would be close to the orbital period that you used in your calculations, but not equal. But let's look at basing it off the orbital period (around Jupiter) first, like your scheme does. (Europa being tidally locked means that fortunately we don't have to account for any additional rotation in this scheme.)
+Yes, that was my suggestion. The time between perihelions would be 
+close to the orbital period that you used in your calculations, but 
+not equal. But let's look at basing it off the orbital period (around 
+Jupiter) first, like your scheme does. (Europa being tidally locked 
+means that fortunately we don't have to account for any additional 
+rotation in this scheme.)
 
-Viewing the Jupiter-Europa system from the top, the orbital period would be the time between when Europa is at twelve o'clock in relation to Jupiter, and the time when it is next at twelve o'clock, after one orbit. As Jupiter goes on its twelve Earth-year journey around the sun, then, sometimes this twelve o'clock position leaves you pointed at the sun, and sometimes away. So for any fixed point on Europa's surface, for six Earth-years your day would start in direct sunlight, and for the other six Earth-years, your day would start in the dark.
+Viewing the Jupiter-Europa system from the top, the orbital period 
+would be the time between when Europa is at twelve o'clock in 
+relation to Jupiter, and the time when it is next at twelve o'clock, 
+after one orbit. As Jupiter goes on its twelve Earth-year journey 
+around the sun, then, sometimes this twelve o'clock position leaves 
+you pointed at the sun, and sometimes away. So for any fixed point on 
+Europa's surface, for six Earth-years your day would start in direct 
+sunlight, and for the other six Earth-years, your day would start in 
+the dark.
 
-Basing it on perihelion would seem more simple and regular to me, given that that's how we do it on Earth. But, point taken about artificial lighting and such. Especially given how meagre the sunlight would be there, and how bad the radiation would be on the surface.
+Basing it on perihelion would seem more simple and regular to me, 
+given that that's how we do it on Earth. But, point taken about 
+artificial lighting and such. Especially given how meagre the 
+sunlight would be there, and how bad the radiation would be on the 
+surface.
 
-There may be other points in favor of the perihelion-based approach, like, when you're pointed at the sun, you're also pointed (approximately) at the Earth, and so that's when you'd want to do your communications. And basing the day on the perihelion also means you can know when Jupiter will be lit up in the sky, so you can go and gawk at it :) Seen from Europa, it would be the width of about six full moons IIRC, and always at roughly the same spot in the sky -- how spectacular would that be?
+There may be other points in favor of the perihelion-based approach, 
+like, when you're pointed at the sun, you're also pointed 
+(approximately) at the Earth, and so that's when you'd want to do 
+your communications. And basing the day on the perihelion also means 
+you can know when Jupiter will be lit up in the sky, so you can go 
+and gawk at it :) Seen from Europa, it would be the width of about 
+six full moons IIRC, and always at roughly the same spot in the sky 
+-- how spectacular would that be?
 
 Ron Hale-Evans 
 
-I like the perihelion proposal in general, but it seems to me either one would have to have irregular-length eudays or put up with a certain amount of shifting of the perihelion time. What do you think?
+I like the perihelion proposal in general, but it seems to me either 
+one would have to have irregular-length eudays or put up with a 
+certain amount of shifting of the perihelion time. What do you think?
 
 Mark Schnitzius 
 
-I had to think about that a bit... I'm not sure. I think Europa orbits on roughly the same plane as Jupiter around the sun, and looks to have quite a circular orbit, so I don't think the eccentricity between perihelions would be huge. There's a good chance I'm misunderstanding or leaving something out though. I'd have to think hard just to compute how to calculate the mean time between perihelions, let alone the standard deviation.
+I had to think about that a bit... I'm not sure. I think Europa 
+orbits on roughly the same plane as Jupiter around the sun, and looks 
+to have quite a circular orbit, so I don't think the eccentricity 
+between perihelions would be huge. There's a good chance I'm 
+misunderstanding or leaving something out though. I'd have to think 
+hard just to compute how to calculate the mean time between 
+perihelions, let alone the standard deviation.
 
-I ended up learning an interesting thing as a result of this discussion... When thinking of the difference between rotational periods and perihelions, it occurred to me that this meant the Earth's rotation couldn't be exactly one day. And it isn't: it's 0.997 days. So don't let anyone tell you the Earth rotates once a day!
+I ended up learning an interesting thing as a result of this 
+discussion... When thinking of the difference between rotational 
+periods and perihelions, it occurred to me that this meant the 
+Earth's rotation couldn't be exactly one day. And it isn't: it's 
+0.997 days. So don't let anyone tell you the Earth rotates once a day!
 
 Ron Hale-Evans 
 
-Mark, if /you're/ having trouble calculating the eccentricity and mean time between perihelions, I'm not going to attempt it. :) It's probably too difficult and/or irregular to use as the basis of a calendar.
+Mark, if /you're/ having trouble calculating the eccentricity and 
+mean time between perihelions, I'm not going to attempt it. :) It's 
+probably too difficult and/or irregular to use as the basis of a 
+calendar.
 
-It looks like I erred with my math anyway, probably a rounding error. For more details, see the discussion on CALNDR-L below. So I'm redoing the calendar with maximum precision (in the data available to me) -- in a spreadsheet, to keep myself honest. Let me know if you want a Dropbox link.
+It looks like I erred with my math anyway, probably a rounding error. 
+For more details, see the discussion on CALNDR-L below. So I'm 
+redoing the calendar with maximum precision (in the data available to 
+me) -- in a spreadsheet, to keep myself honest. Let me know if you 
+want a Dropbox link.
 
-http://calndr-l.10958.n7.nabble.com/Europan-Clock-and-Calendar-td18005.html
+http://calndr-l.10958.n7.nabble.com/Europan-Clock-and-Calendar-td18005
+.html
